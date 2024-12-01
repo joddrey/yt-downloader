@@ -1,7 +1,9 @@
 
 import tkinter as tk
 import ttkbootstrap as ttk
+from components.maFrame import zeframe
 from ttkbootstrap.constants import *
+from pytube import YouTube
 
 class App(tk.Tk):
     def __init__(self) -> None:
@@ -17,12 +19,5 @@ class App(tk.Tk):
         self.ze_frame = zeframe(self)
         self.ze_frame.grid(column=0, row=0)
 
-
-class zeframe(ttk.Frame):
-    def __init__(self, master, **kwargs):
-        super().__init__(master, **kwargs)
-
-        self.label = ttk.Label(self, text='Hello world')
-        self.label.pack()
 app = App()
 app.mainloop()
